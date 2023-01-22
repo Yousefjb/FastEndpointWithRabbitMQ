@@ -1,0 +1,55 @@
+@url = http://localhost:5186/api/catalog
+
+### Read
+GET {{url}}
+
+### Read by id
+GET {{url}}/2
+
+### Create
+POST {{url}}
+Content-Type: application/json
+
+{
+  "Name": "iPhone 8",
+  "Price": 1000,
+  "Cost": 500,
+  "Image64": ""
+}
+
+### Create invalid data
+POST {{url}}
+Content-Type: application/json
+
+{
+  "Name": "A",
+  "Price": 10,
+  "Cost": 5,
+  "Image64": ""
+}
+
+### Create 2
+POST {{url}}
+Content-Type: application/json
+
+{
+  "Name": "iPhone 13 Pro Max",
+  "Price": 3000,
+  "Cost": 2300,
+  "Image64": ""
+}
+
+### Update 
+
+POST {{url}}/1
+Content-Type: application/json
+
+{
+  "Name": "iPhone 7",
+  "Price": 1500,
+  "Cost": 900,
+  "Image64": ""
+}
+
+### Delete
+DELETE {{url}}/1
